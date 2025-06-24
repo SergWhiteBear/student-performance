@@ -1,0 +1,74 @@
+{
+    "feature_columns": [
+        "ege_score"
+    ],
+    "metrics": {
+        "performance_metrics": {
+            "Model Type": "PROBIT",
+            "Accuracy": 0.78125,
+            "ROC AUC": 0.8705882352941177,
+            "Log Loss": 0.478606565999174,
+            "Pseudo R² (McFadden)": 0.12717124531865465,
+            "LR0": -49.878815650971184,
+            "LRF": -43.53566454961758,
+            "Likelihood Ratio (LR)": 12.68630220270721,
+            "Pseudo R²": 0.28389688959178727,
+            "Rp² (Prediction Quality)": 0.5333333333333333,
+            "Correct Predictions (%)": 78.125,
+            "chi2": 3.841458820694124
+        },
+        "classification_report": {
+            "False": {
+                "precision": 0.8333333333333334,
+                "recall": 0.6666666666666666,
+                "f1-score": 0.7407407407407407,
+                "support": 15.0
+            },
+            "True": {
+                "precision": 0.75,
+                "recall": 0.8823529411764706,
+                "f1-score": 0.8108108108108109,
+                "support": 17.0
+            },
+            "accuracy": 0.78125,
+            "macro avg": {
+                "precision": 0.7916666666666667,
+                "recall": 0.7745098039215685,
+                "f1-score": 0.7757757757757757,
+                "support": 32.0
+            },
+            "weighted avg": {
+                "precision": 0.7890625,
+                "recall": 0.78125,
+                "f1-score": 0.7779654654654655,
+                "support": 32.0
+            }
+        },
+        "confusion_matrix": {
+            "0": {
+                "false": 10,
+                "true": 2
+            },
+            "1": {
+                "false": 5,
+                "true": 15
+            }
+        },
+        "model_statistics": [
+            {
+                "Feature": "const",
+                "Coefficient": -6.509348711521568,
+                "P-value": 0.0012126594248562212,
+                "Std Error": 2.011612697828143
+            },
+            {
+                "Feature": "ege_score",
+                "Coefficient": 0.029661820343296234,
+                "P-value": 0.0012618564566754468,
+                "Std Error": 0.009198843180185644
+            }
+        ]
+    },
+    "saved_at": "2025-05-29T18:08:51.082888",
+    "direction_id": 1
+}

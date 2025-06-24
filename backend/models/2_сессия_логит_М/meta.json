@@ -1,0 +1,81 @@
+{
+    "feature_columns": [
+        "session_1_passed",
+        "math_score"
+    ],
+    "metrics": {
+        "performance_metrics": {
+            "Model Type": "LOGIT",
+            "Accuracy": 0.90625,
+            "ROC AUC": 0.935546875,
+            "Log Loss": 0.3166294440241976,
+            "Pseudo R² (McFadden)": 0.5793622956368101,
+            "LR0": -48.901915158134386,
+            "LRF": -20.569989331081125,
+            "Likelihood Ratio (LR)": 56.66385165410652,
+            "Pseudo R²": 0.6390862859777657,
+            "Rp² (Prediction Quality)": 0.8125,
+            "Correct Predictions (%)": 90.625,
+            "chi2": 5.991464547107979
+        },
+        "classification_report": {
+            "False": {
+                "precision": 0.9333333333333333,
+                "recall": 0.875,
+                "f1-score": 0.9032258064516129,
+                "support": 16.0
+            },
+            "True": {
+                "precision": 0.8823529411764706,
+                "recall": 0.9375,
+                "f1-score": 0.9090909090909091,
+                "support": 16.0
+            },
+            "accuracy": 0.90625,
+            "macro avg": {
+                "precision": 0.907843137254902,
+                "recall": 0.90625,
+                "f1-score": 0.906158357771261,
+                "support": 32.0
+            },
+            "weighted avg": {
+                "precision": 0.907843137254902,
+                "recall": 0.90625,
+                "f1-score": 0.906158357771261,
+                "support": 32.0
+            }
+        },
+        "confusion_matrix": {
+            "0": {
+                "false": 14,
+                "true": 1
+            },
+            "1": {
+                "false": 2,
+                "true": 15
+            }
+        },
+        "model_statistics": [
+            {
+                "Feature": "const",
+                "Coefficient": -4.713103701125701,
+                "P-value": 0.16035281390774625,
+                "Std Error": 3.3571841777082363
+            },
+            {
+                "Feature": "session_1_passed",
+                "Coefficient": 5.118389505239728,
+                "P-value": 4.1559712942211865e-06,
+                "Std Error": 1.1118652995149834
+            },
+            {
+                "Feature": "math_score",
+                "Coefficient": 0.015980712577488187,
+                "P-value": 0.7229045199270339,
+                "Std Error": 0.045069457163471854
+            }
+        ]
+    },
+    "saved_at": "2025-06-13T20:14:51.702221",
+    "direction_id": 1
+}
