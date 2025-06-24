@@ -29,7 +29,6 @@ class StudentImportService:
         direction = await self.direction_repo.get_or_create(sheet_name)
 
         max_session = [df[col].max() for col in required_columns[-4:]]
-
         students = []
         for _, row in df.iterrows():
             student = BaseStudent(
@@ -37,10 +36,10 @@ class StudentImportService:
                 math_score=row["балл по Математике"],
                 russian_score=row["балл по Русскому"],
                 ege_score=row["сумма баллов ЕГЭ"],
-                session_1_passed=row["1 сессия"] == max_session[0],
-                session_2_passed=row["2 сессия"] == max_session[1],
-                session_3_passed=row["3 сессия"] == max_session[2],
-                session_4_passed=row["4 сессия"] == max_session[3],
+                session_1_passed=(1 if 0 < max_session[0] == row["1 сессия"] else 0),
+                session_2_passed=(1 if 0 < max_session[1] == row["2 сессия"] else 0),
+                session_3_passed=(1 if 0 < max_session[2] == row["3 сессия"] else 0),
+                session_4_passed=(1 if 0 < max_session[3] == row["4 сессия"] else 0),
                 direction_id=direction.id,
             )
             students.append(student)
